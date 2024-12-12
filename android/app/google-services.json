@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "533823868562",
+    "project_id": "formme-39cc9",
+    "storage_bucket": "formme-39cc9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:533823868562:android:062fffe7e3d1f59d2d604b",
+        "android_client_info": {
+          "package_name": "com.example.form_me"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnbeGOMrijM8DkH2b4SbIgJI3AywiskBs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
