@@ -1,0 +1,24 @@
+name: Build
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened]
+jobs:
+  sonarqube:
+    name: SonarQube
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Shallow clones should be disabled for better relevancy of analysis
+      - name: Install dependencies
+        run: flutter pub get
+      - name: Build
+        run: flutter build apk --release # Pour Android
+      - name: SonarQube Scan
+        uses: SonarSource/sonarqube-scan-action@v4
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Nécessaire pour obtenir les informations des PR, si présentes
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }} # Token d'accès à SonarQube
