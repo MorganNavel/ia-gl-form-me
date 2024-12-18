@@ -3,7 +3,7 @@ import 'package:form_me/models/course.dart';
 import 'package:form_me/services/course.dart';
 
 class CourseListPage extends StatelessWidget {
-  const CourseListPage({Key? key}) : super(key: key);
+  const CourseListPage({super.key});
 
   @override
   Widget build(BuildContext context) {

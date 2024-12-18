@@ -4,7 +4,7 @@ import 'package:form_me/pages/home.dart';
 import 'package:form_me/services/auth.dart';
 
 class RegisterPage extends StatefulWidget {
-  const RegisterPage({Key? key}) : super(key: key);
+  const RegisterPage({super.key});
 
   @override
   _RegisterPageState createState() => _RegisterPageState();

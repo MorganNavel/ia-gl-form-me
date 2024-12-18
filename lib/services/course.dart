@@ -12,7 +12,6 @@ class CourseService {
 
       return CourseModel.fromFirestore(await docRef.get());
     } catch (e) {
-      print('Erreur lors de la création du cours : $e');
       return null;
     }
   }
@@ -31,7 +30,6 @@ class CourseService {
 
       return CourseModel.fromFirestore(doc);
     } catch (e) {
-      print('Erreur lors de la récupération du cours : $e');
       return null;
     }
   }

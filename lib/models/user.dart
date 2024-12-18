@@ -34,7 +34,6 @@ class UserModel {
         enrolledCourses: List<String>.from(data['enrolledCourses'] ?? []),
       );
     } catch (e) {
-      print("Error retrieving user data: $e");
       rethrow;
     }
   }

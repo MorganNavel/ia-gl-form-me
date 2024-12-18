@@ -1,4 +1,6 @@
-// main.dart
+///@author - Morgan Navel
+library;
+
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:form_me/pages/login.dart';
@@ -6,7 +8,7 @@ import 'package:form_me/pages/login.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized(); // Initialisation du binding
   await Firebase.initializeApp(); // Initialisation de Firebase
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {

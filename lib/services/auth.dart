@@ -16,8 +16,6 @@ class AuthService {
       // Créer l'utilisateur avec Firebase Auth
       UserCredential result = await _auth.createUserWithEmailAndPassword(
           email: email, password: password);
-      print('UserCredential type: ${result.runtimeType}');
-      print('User type: ${result.user?.runtimeType}');
 
       // Créer le modèle utilisateur
       UserModel userModel = UserModel(
@@ -27,7 +25,6 @@ class AuthService {
         userType: userType,
         createdAt: DateTime.now(),
       );
-      print('UserModel created: $userModel');
 
       // Enregistrer les détails dans Firestore
       await _firestore
@@ -54,7 +51,6 @@ class AuthService {
 
       return UserModel.fromFirestore(userDoc);
     } catch (e) {
-      print('Erreur de connexion : $e');
       return null;
     }
   }
